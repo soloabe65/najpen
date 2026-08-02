@@ -9,16 +9,19 @@ const projects = [
     title: 'Offshore Platform Fabrication',
     category: 'Fabrication',
     description: 'Complete steel structure fabrication for offshore platform',
+    image: '/images/platform.jpg',
   },
   {
     title: 'Deep Well Drilling Project',
     category: 'Drilling',
     description: 'Successful drilling operations at 5000m depth',
+    image: '/images/drillingrig.jpg',
   },
   {
     title: 'Pipeline Construction',
     category: 'Construction',
     description: 'Cross-country pipeline installation and testing',
+    image: '/images/pipeline.jpg',
   },
 ]
 
@@ -55,18 +58,20 @@ function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {filtered.map((project, i) => (
             <AnimatedCard key={project.title} delay={i * 0.1} className="bg-white rounded-xl shadow-sm overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <svg className="w-16 h-16 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="1" />
-                  <path strokeLinecap="round" strokeWidth="1" d="M3 9h18M9 3v18" />
-                </svg>
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+                <span className="absolute top-3 right-3 bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                  100% Complete
+                </span>
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-lg text-[#0F172A]">{project.title}</h3>
                 <p className="text-[#64748B] text-sm mt-2">{project.description}</p>
-                <span className="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mt-4">
-                  100% Complete
-                </span>
               </div>
             </AnimatedCard>
           ))}
