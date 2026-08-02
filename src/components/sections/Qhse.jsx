@@ -7,12 +7,19 @@ const qhseItems = [
     description:
       'ISO 9001:2015 certified. Every project follows rigorous QA/QC procedures from procurement through fabrication to final delivery.',
     icon: (
-      <svg className="w-10 h-10 text-[#EA580C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-11 h-11 text-[#EA580C]" viewBox="0 0 48 48" fill="none">
+        <path d="M19 31l-7 3 4.5 6.5L25 38z" fill="#EA580C" opacity="0.85" />
+        <path d="M21 38l1 6 2-1 1-5z" fill="#EA580C" opacity="0.7" />
+        <path d="M28 31l6 3-4 6.5L24 38z" fill="#EA580C" opacity="0.85" />
+        <path d="M27 38l-1 6-2-1-1-5z" fill="#EA580C" opacity="0.7" />
+        <circle cx="24" cy="20" r="12.5" fill="#FFFFFF" stroke="#EA580C" strokeWidth="2.6" />
+        <circle cx="24" cy="20" r="8.5" stroke="#EA580C" strokeWidth="1.3" strokeDasharray="2.4 2" opacity="0.5" />
         <path
+          d="M18.5 20.3l3.3 3.3 7.2-8.3"
+          stroke="#EA580C"
+          strokeWidth="3.2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
         />
       </svg>
     ),
@@ -22,13 +29,18 @@ const qhseItems = [
     description:
       'Goal-zero safety culture. Comprehensive HSE management system with regular drills, hazard identification, and behavioral-based safety programs.',
     icon: (
-      <svg className="w-10 h-10 text-[#EA580C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-11 h-11" viewBox="0 0 48 48" fill="none">
         <path
-          strokeLinecap="round"
+          d="M16 6v9a8 8 0 0 0 16 0V6"
+          stroke="#EA580C"
+          strokeWidth="3"
           strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016M12 3c.688 0 1.366.063 2.025.188"
+          fill="#EA580C"
+          fillOpacity="0.12"
         />
+        <path d="M9 31.5c10.5 3 21.5 3 32 0" stroke="#EA580C" strokeWidth="3" strokeLinecap="round" />
+        <path d="M21 31v-5a3 3 0 0 1 6 0v5" stroke="#EA580C" strokeWidth="2.4" strokeLinejoin="round" strokeLinecap="round" />
+        <path d="M23 2.5v3M28 3l-1.8 2.4" stroke="#EA580C" strokeWidth="1.6" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -37,13 +49,19 @@ const qhseItems = [
     description:
       'Minimising ecological footprint through waste management, spill prevention, emissions control, and environmental impact assessments on every project.',
     icon: (
-      <svg className="w-10 h-10 text-[#EA580C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-11 h-11" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="28" r="14.5" stroke="#EA580C" strokeWidth="2.6" />
+        <ellipse cx="24" cy="28" rx="14.5" ry="3.8" stroke="#EA580C" strokeWidth="1.5" opacity="0.7" />
+        <path d="M10.5 21.5a24 24 0 0 0 27 0M10.5 34.5a24 24 0 0 0 27 0" stroke="#EA580C" strokeWidth="1.2" opacity="0.5" />
         <path
-          strokeLinecap="round"
+          d="M15.5 20.5c.4-6 4-10.8 10.5-12.8-1.8 7.8-5.6 12.2-10.5 12.8z"
+          fill="#EA580C"
+          fillOpacity="0.12"
+          stroke="#EA580C"
+          strokeWidth="2.2"
           strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M2.25 12l5.25-2.25m0 0L12 21l4.5-11.25m0 0L21.75 12M12 3a9 9 0 010 18 9 9 0 010-18z"
         />
+        <path d="M16.5 20c1.6-3.6 4-6.4 9-8.3" stroke="#EA580C" strokeWidth="1.6" strokeLinecap="round" opacity="0.8" />
       </svg>
     ),
   },
@@ -75,7 +93,9 @@ function Qhse() {
               key={item.title}
               className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-8"
             >
-              <div className="mb-4">{item.icon}</div>
+              <div className="mb-5 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-orange-50 border border-orange-100">
+                {item.icon}
+              </div>
               <h3 className="font-semibold text-lg text-[#0F172A]">{item.title}</h3>
               <p className="text-[#64748B] text-sm mt-3 leading-relaxed">{item.description}</p>
             </div>
