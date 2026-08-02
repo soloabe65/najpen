@@ -37,6 +37,8 @@ function Footer() {
                 { label: 'Home', to: '/' },
                 { label: 'About', to: '/about' },
                 { label: 'Services', to: '/services' },
+                { label: 'Projects', to: '/projects' },
+                { label: 'Testimonials', to: '/testimonials' },
                 { label: 'QHSE', to: '/qhse' },
                 { label: 'Media', to: '/media' },
                 { label: 'Contact', to: '/contact' },

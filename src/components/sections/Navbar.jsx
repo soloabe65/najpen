@@ -1,37 +1,41 @@
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'QHSE', href: '#qhse' },
-  { label: 'Media', href: '#media' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/about' },
+  { label: 'Services', to: '/services' },
+  { label: 'Projects', to: '/projects' },
+  { label: 'Testimonials', to: '/testimonials' },
+  { label: 'QHSE', to: '/qhse' },
+  { label: 'Media', to: '/media' },
+  { label: 'Contact', to: '/contact' },
 ]
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const linkClass = ({ isActive }) =>
+    `text-sm font-medium transition-colors ${
+      isActive ? 'text-[#EA580C]' : 'text-[#64748B] hover:text-[#0F172A]'
+    }`
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#home" className="text-[#0F172A] font-bold text-xl tracking-tight">
+          <NavLink to="/" className="text-[#0F172A] font-bold text-xl tracking-tight">
             NAJPEN
-          </a>
-          <div className="hidden md:flex items-center gap-8">
+          </NavLink>
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-[#64748B] hover:text-[#0F172A] transition-colors"
-              >
+              <NavLink key={link.to} to={link.to} className={linkClass}>
                 {link.label}
-              </a>
+              </NavLink>
             ))}
           </div>
           <button
-            className="md:hidden p-2 text-[#0F172A]"
+            className="lg:hidden p-2 text-[#0F172A]"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
           >
@@ -46,17 +50,17 @@ function Navbar() {
         </div>
       </div>
       {menuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-[#E2E8F0]">
+        <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-[#E2E8F0]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-3">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="block text-sm font-medium text-[#64748B] hover:text-[#0F172A] transition-colors"
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={linkClass}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
           </div>
         </div>

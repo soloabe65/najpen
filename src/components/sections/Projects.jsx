@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import AnimatedSection from '../AnimatedSection'
 import AnimatedCard from '../AnimatedCard'
 
@@ -39,6 +40,15 @@ function Projects() {
             COMPLETED PROJECTS
           </span>
           <h2 className="text-4xl font-bold text-[#0F172A] mt-2">Our Track Record</h2>
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 mt-5 text-[#EA580C] hover:text-orange-600 font-semibold text-sm transition-colors"
+          >
+            View Full Portfolio
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
         <div className="flex justify-center gap-3 mt-10">
           {categories.map((cat) => (

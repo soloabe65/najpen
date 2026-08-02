@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import AnimatedSection from '../AnimatedSection'
 
 const testimonials = [
@@ -32,6 +33,15 @@ function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span className="text-[#EA580C] uppercase tracking-wider text-sm font-semibold">TESTIMONIALS</span>
         <h2 className="text-4xl font-bold text-[#0F172A] mt-2">What Our Clients Say</h2>
+        <Link
+          to="/testimonials"
+          className="inline-flex items-center gap-2 mt-5 text-[#EA580C] hover:text-orange-600 font-semibold text-sm transition-colors"
+        >
+          Read All Testimonials
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </Link>
 
         <div className="max-w-2xl mx-auto mt-12">
           <div className="bg-white rounded-xl shadow-sm border border-[#E2E8F0] p-8">

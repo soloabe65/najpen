@@ -2,12 +2,12 @@ import AnimatedSection from '../AnimatedSection'
 import AnimatedCard from '../AnimatedCard'
 
 const galleryItems = [
-  { label: 'Offshore Rig Operations', category: 'Operations' },
-  { label: 'Pipeline Installation', category: 'Projects' },
-  { label: 'Fabrication Yard', category: 'Facilities' },
-  { label: 'Drilling Team', category: 'Team' },
-  { label: 'Safety Training Session', category: 'QHSE' },
-  { label: 'Equipment Commissioning', category: 'Projects' },
+  { label: 'Offshore Rig Operations', category: 'Operations', image: '/images/drilling.jpg' },
+  { label: 'Offshore Platform', category: 'Projects', image: '/images/platform.jpg' },
+  { label: 'Drilling Rig at Site', category: 'Operations', image: '/images/drillingrig.jpg' },
+  { label: 'Fabrication Yard', category: 'Facilities', image: '/images/fabrication.jpg' },
+  { label: 'Drilling & Well Team', category: 'Team', image: '/images/well.jpg' },
+  { label: 'Equipment Commissioning', category: 'Projects', image: '/images/installation.jpg' },
 ]
 
 const videos = [
@@ -42,19 +42,20 @@ function Media() {
                 delay={i * 0.08}
                 className="group relative bg-white rounded-xl overflow-hidden border border-[#E2E8F0] cursor-pointer"
               >
-                <div className="h-52 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <svg className="w-16 h-16 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="1" />
-                    <circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1" />
-                    <path strokeLinecap="round" strokeWidth="1" d="M21 15l-5-5L5 21" />
-                  </svg>
+                <div className="h-52 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.label}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-5">
                   <div>
-                    <span className="text-xs font-semibold text-[#EA580C] uppercase tracking-wider">
+                    <span className="text-xs font-semibold text-[#EA580C] uppercase tracking-wider bg-white/90 px-2 py-0.5 rounded">
                       {item.category}
                     </span>
-                    <p className="text-white font-semibold text-sm">{item.label}</p>
+                    <p className="text-white font-semibold text-sm mt-2">{item.label}</p>
                   </div>
                 </div>
               </AnimatedCard>
