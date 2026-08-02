@@ -18,6 +18,7 @@ export default function FloatingPumpjack({
 
     const ctx = canvas.getContext('2d', { willReadFrequently: true })
     const range = Math.max(thresholdHigh - thresholdLow, 1)
+    const maxDim = window.innerWidth < 768 ? 320 : 640
     let lastFrame = -1
     let rafId
 
@@ -33,14 +34,15 @@ export default function FloatingPumpjack({
       }
       lastFrame = video.currentTime
 
-      const w = video.videoWidth
-      const h = video.videoHeight
+      const scale = Math.min(1, maxDim / Math.max(video.videoWidth, video.videoHeight))
+      const w = Math.round(video.videoWidth * scale)
+      const h = Math.round(video.videoHeight * scale)
       if (canvas.width !== w || canvas.height !== h) {
         canvas.width = w
         canvas.height = h
       }
 
-      ctx.drawImage(video, 0, 0)
+      ctx.drawImage(video, 0, 0, w, h)
       const imageData = ctx.getImageData(0, 0, w, h)
       const d = imageData.data
 

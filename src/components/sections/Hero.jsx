@@ -38,7 +38,7 @@ function Hero() {
               </a>
             </div>
           </div>
-          <div className="hidden lg:block lg:w-2/5">
+          <div className="w-full lg:w-2/5">
             <FloatingPumpjack />
           </div>
         </div>
