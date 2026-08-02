@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #EA580C;
+  --color-brand-blue: #2563EB;
+  --color-surface-default: #FFFFFF;
+  --color-surface-light: #F8FAFC;
+  --color-surface-dark: #0F172A;
+  --color-ink-default: #0F172A;
+  --color-ink-muted: #64748B;
+  --color-border-default: #E2E8F0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
