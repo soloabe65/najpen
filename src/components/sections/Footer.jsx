@@ -41,6 +41,7 @@ function Footer() {
                 { label: 'Testimonials', to: '/testimonials' },
                 { label: 'QHSE', to: '/qhse' },
                 { label: 'Media', to: '/media' },
+                { label: 'Invoice', to: '/invoice' },
                 { label: 'Contact', to: '/contact' },
               ].map((item) => (
                 <li key={item.label}>

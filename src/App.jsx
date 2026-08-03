@@ -11,6 +11,7 @@ import TestimonialsPage from './pages/TestimonialsPage'
 import QhsePage from './pages/QhsePage'
 import MediaPage from './pages/MediaPage'
 import ContactPage from './pages/ContactPage'
+import InvoicePage from './pages/InvoicePage'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -36,6 +37,7 @@ function App() {
             <Route path="/qhse" element={<QhsePage />} />
             <Route path="/media" element={<MediaPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/invoice" element={<InvoicePage />} />
           </Routes>
         </main>
         <Footer />

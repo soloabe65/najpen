@@ -21,3 +21,25 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@media print {
+  body {
+    background: #ffffff !important;
+  }
+
+  nav,
+  footer,
+  .print-hide {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #invoice-print {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}

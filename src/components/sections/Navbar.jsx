@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'Testimonials', to: '/testimonials' },
   { label: 'QHSE', to: '/qhse' },
   { label: 'Media', to: '/media' },
+  { label: 'Invoice', to: '/invoice' },
   { label: 'Contact', to: '/contact' },
 ]
 
@@ -27,7 +28,7 @@ function Navbar() {
           <NavLink to="/" className="text-[#0F172A] font-bold text-xl tracking-tight">
             NAJPEN
           </NavLink>
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => (
               <NavLink key={link.to} to={link.to} className={linkClass}>
                 {link.label}
@@ -35,7 +36,7 @@ function Navbar() {
             ))}
           </div>
           <button
-            className="lg:hidden p-2 text-[#0F172A]"
+            className="xl:hidden p-2 text-[#0F172A]"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
           >
@@ -50,7 +51,7 @@ function Navbar() {
         </div>
       </div>
       {menuOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-[#E2E8F0]">
+        <div className="xl:hidden bg-white/95 backdrop-blur-md border-t border-[#E2E8F0]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-3">
             {navLinks.map((link) => (
               <NavLink
