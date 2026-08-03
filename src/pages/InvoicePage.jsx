@@ -2,11 +2,12 @@ import { useState } from 'react'
 import PageHeader from '../components/PageHeader'
 import AnimatedSection from '../components/AnimatedSection'
 
-const naira = new Intl.NumberFormat('en-NG', {
-  style: 'currency',
-  currency: 'NGN',
-  minimumFractionDigits: 2,
-})
+const naira = (value) =>
+  new Intl.NumberFormat('en-NG', {
+    style: 'currency',
+    currency: 'NGN',
+    minimumFractionDigits: 2,
+  }).format(value)
 
 function genInvoiceNumber() {
   const d = new Date()
