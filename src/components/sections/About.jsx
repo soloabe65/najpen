@@ -22,7 +22,7 @@ function About() {
             </h2>
             <p className="text-[#64748B] mt-6 leading-relaxed">
               NAJPEN GLOBAL INTEGRATED LTD is a leading indigenous oil and gas service company
-              headquartered in Port Harcourt, Nigeria. With over 15 years of industry experience,
+              headquartered in Warri, Delta State, Nigeria. With over 15 years of industry experience,
               we deliver world-class services in fabrication, drilling, well services, construction,
               installation, and manpower recruitment across the African continent.
             </p>

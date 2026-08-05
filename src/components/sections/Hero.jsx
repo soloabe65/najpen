@@ -21,7 +21,7 @@ function Hero() {
               NAJPEN GLOBAL INTEGRATED LTD
             </h1>
             <p className="text-lg text-[#64748B] max-w-xl mb-8 mx-auto lg:mx-0">
-              World-class oil drilling services, energy solutions, procurement, construction, and well services.
+              World-class oil drilling services, engineering and energy solutions, procurement and supply, construction, manpower and human resources services.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
               <a

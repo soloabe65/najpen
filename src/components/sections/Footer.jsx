@@ -72,10 +72,10 @@ function Footer() {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Contact Info</h4>
             <ul className="space-y-3 text-sm text-[#64748B]">
-              <li>123 Marine Drive, Lekki Phase 1, Lagos, Nigeria</li>
+              <li>10 Ogbanghankomi Close, Ajamimogha, Warri, Delta State</li>
               <li>
-                <a href="tel:+234800000000" className="hover:text-white transition-colors">
-                  +234 800 000 0000
+                <a href="tel:+2348033773159" className="hover:text-white transition-colors">
+                  +2348033773159
                 </a>
               </li>
               <li>

@@ -57,10 +57,10 @@ function InvoiceItem({ label, value, onChange, placeholder, type = 'text' }) {
 function InvoicePage() {
   const [company, setCompany] = useState({
     name: 'NAJPEN GLOBAL INTEGRATED LTD',
-    address: '123 Marine Drive, Lekki Phase 1, Lagos, Nigeria',
+    address: '10 Ogbanghankomi Close, Ajamimogha, Warri, Delta State',
     email: 'info@najpen.com',
-    phone: '+234 800 000 0000',
-    rc: 'RC 1234567',
+    phone: '+2348033773159',
+    rc: 'RC 9712455',
   })
   const [client, setClient] = useState({ company: '', name: '', address: '', email: '', phone: '' })
   const [invoiceNo, setInvoiceNo] = useState(genInvoiceNumber())

@@ -54,7 +54,7 @@ function Contact() {
                 </svg>
                 <div>
                   <p className="font-semibold text-[#0F172A]">Address</p>
-                  <p className="text-[#64748B] text-sm">Port Harcourt, Rivers State, Nigeria</p>
+                  <p className="text-[#64748B] text-sm">10 Ogbanghankomi Close, Ajamimogha, Warri, Delta State</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -63,7 +63,7 @@ function Contact() {
                 </svg>
                 <div>
                   <p className="font-semibold text-[#0F172A]">Phone</p>
-                  <p className="text-[#64748B] text-sm">+234 XXX XXX XXXX</p>
+                  <p className="text-[#64748B] text-sm">+2348033773159</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -81,7 +81,8 @@ function Contact() {
                 </svg>
                 <div>
                   <p className="font-semibold text-[#0F172A]">Office Hours</p>
-                  <p className="text-[#64748B] text-sm">Mon - Fri: 8:00 AM - 5:00 PM</p>
+                  <p className="text-[#64748B] text-sm">Mon–Fri: 8am – 5pm</p>
+                  <p className="text-[#64748B] text-sm">Sat: 10am – 2pm</p>
                 </div>
               </div>
             </div>
