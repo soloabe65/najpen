@@ -25,8 +25,8 @@ function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <NavLink to="/" className="text-[#0F172A] font-bold text-xl tracking-tight">
-            NAJPEN
+          <NavLink to="/" className="flex items-center">
+            <img src="/images/logo.jpg" alt="NAJPEN GLOBAL INTEGRATED LTD" className="h-12 w-12 object-contain" />
           </NavLink>
           <div className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => (

@@ -6,7 +6,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div>
-            <h3 className="text-xl font-bold tracking-tight mb-4">NAJPEN</h3>
+            <img src="/images/logo.jpg" alt="NAJPEN GLOBAL INTEGRATED LTD" className="h-16 w-16 object-contain mb-4" />
             <p className="text-sm text-[#64748B] leading-relaxed mb-6">
               NAJPEN GLOBAL INTEGRATED LTD is a leading provider of oil and gas services, delivering world-class
               solutions across drilling, construction, procurement, and well services.
